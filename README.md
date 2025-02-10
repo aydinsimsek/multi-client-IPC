@@ -1,7 +1,8 @@
 ## Method 
-When a new client is connected to the server's socket, a child process is created with fork() system call and that client is connected to the child process' socket, in this way multiple clients are handled simultaneously.
+When a new client connects to the server's socket, the server creates a new child process using the `fork()` system call.  
+Each child process then handles the communication with the client by creating a new socket for the client connection.  
+This allows the server to handle multiple clients concurrently, with each client being managed by its own child process.
 
+## Screenshot of an Example Usage
 
-## Screenshot of an example usage
-
-![screenshot](https://user-images.githubusercontent.com/43919074/128604957-5397fc63-e1e4-45ef-8c42-48ad8e72ae08.png)
+![screenshot](https://github.com/user-attachments/assets/a403732b-b292-4de9-9d08-55040ac66fc0)
